@@ -1,5 +1,5 @@
-import React from 'react';
-import { ViewProps, ViewStyle, LayoutEvent, ScrollViewProps } from 'react-native';
+import React from "react";
+import { ViewProps, ViewStyle, LayoutEvent, ScrollViewProps } from "react-native";
 
 interface KeyboardAwareScrollViewContainerProps extends ScrollViewProps {
    onKeyboardDidShow: (event: LayoutEvent) => void;

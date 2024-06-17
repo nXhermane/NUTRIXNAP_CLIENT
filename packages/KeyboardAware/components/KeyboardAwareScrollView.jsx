@@ -1,6 +1,6 @@
-import { View, TextInput, UIManager, findNodeHandle, Platform } from 'react-native';
-import React, { useEffect, useState, useMemo, useCallback, useRef } from 'react';
-import KeyboardAwareScrollViewContainer from './KeyboardAwareScrollViewContainer';
+import { View, TextInput, UIManager, findNodeHandle, Platform } from "react-native";
+import React, { useEffect, useState, useMemo, useCallback, useRef } from "react";
+import KeyboardAwareScrollViewContainer from "./KeyboardAwareScrollViewContainer";
 
 const KEYBOARD_EXTRA_HEIGHT = 60;
 const KeyboardAwareScrollView = (props) => {
@@ -71,16 +71,16 @@ const KeyboardAwareScrollView = (props) => {
             }
          }
          containerStyle={{
-            maxHeight: containerHeight != 0 ? containerHeight : '100%',
+            maxHeight: containerHeight != 0 ? containerHeight : "100%",
          }}
       >
          <View
             style={{
-               width: '100%',
+               width: "100%",
                ...style,
             }}
          >
-            {typeof children === 'function' ? children() : children}
+            {typeof children === "function" ? children() : children}
          </View>
       </KeyboardAwareScrollViewContainer>
    );

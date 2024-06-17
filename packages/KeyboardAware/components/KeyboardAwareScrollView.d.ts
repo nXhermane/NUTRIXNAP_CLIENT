@@ -1,8 +1,8 @@
-import React from 'react';
-import { ViewStyle, ScrollViewProps } from 'react-native';
+import React from "react";
+import { ViewStyle, ScrollViewProps } from "react-native";
 
-interface KeyboardAwareScrollViewProps extends ScrollViewProps{
-   children?: React.ReactNode  | (() => React.ReactNode);
+interface KeyboardAwareScrollViewProps extends ScrollViewProps {
+   children?: React.ReactNode | (() => React.ReactNode);
    style?: ViewStyle;
 }
 

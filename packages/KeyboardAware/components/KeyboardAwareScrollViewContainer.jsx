@@ -1,14 +1,14 @@
-import { View, ScrollView, Keyboard } from 'react-native';
-import React from 'react';
+import { View, ScrollView, Keyboard } from "react-native";
+import React from "react";
 
 const KeyboardAwareScrollViewContainer = React.forwardRef((props, ref) => {
    const { children, style = {}, onLayout, onLayoutContainer, onKeyboardDidShow, onKeyboardDidHide, containerStyle = {} } = props;
 
    React.useEffect(() => {
-      const showsListener = Keyboard.addListener('keyboardDidShow', (e) => {
+      const showsListener = Keyboard.addListener("keyboardDidShow", (e) => {
          onKeyboardDidShow && onKeyboardDidShow(e);
       });
-      const hideListener = Keyboard.addListener('keyboardDidHide', (e) => {
+      const hideListener = Keyboard.addListener("keyboardDidHide", (e) => {
          onKeyboardDidHide && onKeyboardDidHide(e);
       });
       return () => {
@@ -22,8 +22,8 @@ const KeyboardAwareScrollViewContainer = React.forwardRef((props, ref) => {
          <ScrollView
             ref={ref && ref}
             contentContainerStyle={style}
-            keyboardShouldPersistTaps={'always'}
-            keyboardDismissMode={'none'}
+            keyboardShouldPersistTaps={"always"}
+            keyboardDismissMode={"none"}
             scrollEventThrottle={1}
             onLayout={onLayout && onLayout}
             {...props}
